@@ -23,3 +23,11 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: contacts_test
+  pool: 5
+  username: kevineo # or your system username
+  password: kevineo7670
