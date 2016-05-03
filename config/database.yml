@@ -17,9 +17,14 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: contacts_test
+  pool: 5
+  username: root
+  password:
 
 production:
   <<: *default
   database: db/production.sqlite3
+
